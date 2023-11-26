@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-history';
+  myImage:String = "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2021-12/Telosa-ciudad-futurista-b2d97c.jpg"
 }

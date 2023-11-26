@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Estilos para el footer */
+footer {
+  margin-top: auto;
+  background-color: #233c6d;
+  color: white;
+  padding: 20px 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #7c4dff;
+  text-decoration: none;
+}
+
+.facebook-link,
+.whatsapp-link,
+.youtube-link {
+  font-size: 16px; /* Puedes ajustar el tamaño según tus preferencias */
+  transition: font-size 0.3s ease; /* Animación de transición */
+}
+
+/* Animación al pasar el cursor */
+.facebook-link:hover,
+.whatsapp-link:hover,
+.youtube-link:hover {
+  font-size: 25px; /* Tamaño más grande al pasar el cursor */
+}
