@@ -10,6 +10,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HelpComponent } from './help/help.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes : Routes = [
 {
@@ -25,8 +26,7 @@ const routes : Routes = [
   component:HelpComponent
 },
 {
-  path: '**',
-  redirectTo: ''
+  path: '**', component: NotFoundComponent
 }
 ];
 
@@ -38,7 +38,8 @@ const routes : Routes = [
     HomeComponent,
     HistoriaComponent,
     CarrouselComponent,
-    HelpComponent
+    HelpComponent,
+    NotFoundComponent
   ],
   imports: [
     [RouterModule.forRoot(routes)],
