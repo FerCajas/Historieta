@@ -11,6 +11,8 @@ import { CarrouselComponent } from './carrousel/carrousel.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HelpComponent } from './help/help.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './page/login/login.component';
+import { RegistroComponent } from './page/registro/registro.component';
 
 const routes : Routes = [
 {
@@ -26,6 +28,14 @@ const routes : Routes = [
   component:HelpComponent
 },
 {
+  path: 'Login',
+  component:LoginComponent
+},
+{
+  path: 'Sing up',
+  component:RegistroComponent
+},
+{
   path: '**', component: NotFoundComponent
 }
 ];
@@ -39,7 +49,9 @@ const routes : Routes = [
     HistoriaComponent,
     CarrouselComponent,
     HelpComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     [RouterModule.forRoot(routes)],
