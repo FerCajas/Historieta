@@ -14,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegistroComponent } from './page/registro/registro.component';
 import {HttpClientModule} from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes : Routes = [
 {
@@ -59,7 +60,8 @@ const routes : Routes = [
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

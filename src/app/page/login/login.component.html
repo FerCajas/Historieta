@@ -2,21 +2,23 @@
   <div class="alert alert-primary" role="alert">
     <p class="text-center"><b>INICIO DE SECCION</b></p>
     <img src="assets/Images/Logo.png" alt="">
-    <form>
+    <form [formGroup] = "login" (submit) = "Acceso()">
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <div class="col-lg-25">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input formControlName = "correo" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <span *ngIf="login.get('correo')?.invalid && login.get('correo')?.touched" class="text-danger">Ingrese su correo</span>
         </div>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
         <div class="col-lg-25">
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input formControlName = "contraseña" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <span *ngIf="login.get('contraseña')?.invalid && login.get('contraseña')?.touched" class="text-danger">Ingrese su contraseña</span>
         </div>
       </div>
       <br>
-        <button type="submit" class="btn btn-success w-100">Acceder</button>
+        <button type="submit" class="btn btn-success w-100" [disabled]="login.invalid">Acceder</button>
     </form>
 
   </div>

@@ -19,7 +19,6 @@ export class HistoriaComponent implements OnInit{
       console.log(data);
       var resp: any = data;
       this.listamangas = resp.data.map((manga: any) => ({
-        small_image_url: manga.small_image_url,
         title: manga.title,
         synopsis: manga.synopsis
       }));
