@@ -13,6 +13,7 @@ import { HelpComponent } from './help/help.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegistroComponent } from './page/registro/registro.component';
+import {HttpClientModule} from '@angular/common/http'
 
 const routes : Routes = [
 {
@@ -32,7 +33,7 @@ const routes : Routes = [
   component:LoginComponent
 },
 {
-  path: 'Sing up',
+  path: 'Singup',
   component:RegistroComponent
 },
 {
@@ -57,7 +58,8 @@ const routes : Routes = [
     [RouterModule.forRoot(routes)],
     BrowserModule,
     AppRoutingModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
