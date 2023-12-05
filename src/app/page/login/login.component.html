@@ -6,8 +6,8 @@
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <div class="col-lg-25">
-          <input formControlName = "correo" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <span *ngIf="login.get('correo')?.invalid && login.get('correo')?.touched" class="text-danger">Ingrese su correo</span>
+          <input formControlName = "usuario" [name]="usuario" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <span *ngIf="login.get('usuario')?.invalid && login.get('usuario')?.touched" class="text-danger">Ingrese su correo</span>
         </div>
       </div>
       <div class="form-group">

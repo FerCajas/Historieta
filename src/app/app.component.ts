@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private translateService:TranslateService){
+    this.translateService.setDefaultLang('en');
+    this.translateService.use(localStorage.getItem('lang') || 'en')
+
+  }
   title = 'my-history';
   myImage:String = "https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2021-12/Telosa-ciudad-futurista-b2d97c.jpg"
+
 }

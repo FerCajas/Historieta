@@ -13,10 +13,16 @@ import { HelpComponent } from './help/help.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegistroComponent } from './page/registro/registro.component';
-import {HttpClientModule} from '@angular/common/http'
-import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient,HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TranslateLoader,TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 const routes : Routes = [
+{ path: '',
+  redirectTo: '/Home',
+  pathMatch: 'full'
+},
 {
   path: 'Home',
   component:HomeComponent
@@ -42,6 +48,11 @@ const routes : Routes = [
 }
 ];
 
+export function HttpLoaderFactory(http:HttpClient){
+  return new TranslateHttpLoader(http);
+}
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,9 +72,17 @@ const routes : Routes = [
     AppRoutingModule,
     CarouselModule.forRoot(),
     HttpClientModule,
-    ReactiveFormsModule
+    TranslateModule.forRoot({
+      loader:{
+        provide:TranslateLoader,
+        useFactory:HttpLoaderFactory,
+        deps:[HttpClient]
+      }
+    }),
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

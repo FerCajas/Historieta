@@ -2,22 +2,22 @@
 <div class="mb-3 d-flex justify-content-center">
   <form class="d-flex" role="search">
     <p>Buscar</p>
-    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 350px;">
-    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+    <input name="searchQuery" [(ngModel)]="searchQuery" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 350px;">
+    <button (click)="optenerdata()" class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
   </form>
 </div>
 <br>
 
 <div class="row">
-    <div class="col-4" *ngFor="let manga of listamangas">
-      <div class="alert alert-primary" role="alert">
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Lectura</button>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            <p class="text-center"><b>{{ manga.title }}</b></p>
-            <p>{{manga.synopsis}}</p>
-          </div>
+  <div class="col-4" *ngFor="let anime of searchResults">
+    <div class="alert alert-primary" role="alert">
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Lectura</button>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          <p class="text-center"><b>{{ anime.title }}</b></p>
+          <p>{{ anime.synopsis }}</p>
         </div>
+      </div>
     </div>
   </div>
 </div>

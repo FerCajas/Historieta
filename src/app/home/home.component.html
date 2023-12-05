@@ -6,7 +6,7 @@
     hacer frente al gigante Disney. Estos dibujos animados a modo de caricaturas
     japonesas son la representación en la gran pantalla de muchas de las famosas
     historias que podemos leer en los mangas.</p>
-  <h2 class="text-center">Seleccione la categoria</h2>
+  <h2 class="text-center">{{'info'|translate}}</h2>
 </div>
 
 <div class="container">
@@ -15,12 +15,12 @@
       <div class="card flip-card" style="width: 18rem;">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="assets/Images/Libro.png" class="card-img-top img-fluid" alt="Libro" style="width: 304px; height: 236px;">
+            <img [src]="img" class="card-img-top img-fluid" alt="Libro" style="width: 304px; height: 236px;">
           </div>
           <div class="flip-card-back">
             <div class="card-body">
-              <h5 class="card-title">LIBRO</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">{{'book'|translate}}</h5>
+              <p class="card-text">{{parrafo}}</p>
               <div class="d-flex justify-content-center">
                 <a href="#" class="btn btn-primary">Abrir</a>
               </div>
@@ -36,12 +36,12 @@
       <div class="card flip-card" style="width: 18rem;">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png" class="card-img-top img-fluid" alt="Mapa" style="width: 304px; height: 236px;">
+            <img [src]="img2" class="card-img-top img-fluid" alt="Mapa" style="width: 304px; height: 236px;">
           </div>
           <div class="flip-card-back">
             <div class="card-body">
-              <h5 class="card-title">JUEGO</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">{{'Play'|translate}}</h5>
+              <p class="card-text">{{parrafo}}</p>
               <div class="d-flex justify-content-center">
                 <a href="#" class="btn btn-primary">Abrir</a>
               </div>
@@ -55,12 +55,12 @@
       <div class="card flip-card" style="width: 18rem;">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="assets/Images/Pago.jpg" class="card-img-top img-fluid" alt="Pago" style="width: 304px; height: 236px;">
+            <img [src]="img3" class="card-img-top img-fluid" alt="Pago" style="width: 304px; height: 236px;">
           </div>
           <div class="flip-card-back">
             <div class="card-body">
-              <h5 class="card-title">PAGO</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">{{'PAY'|translate}}</h5>
+              <p class="card-text">{{parrafo}}</p>
               <div class="d-flex justify-content-center">
                 <a href="#" class="btn btn-primary">Abrir</a>
               </div>
@@ -79,7 +79,7 @@
           <div class="well well-sm">
               <form [formGroup] = "nuevocomentario" (submit) = "guardarcomentario()" class="form-horizontal" method="post">
                   <fieldset>
-                      <legend class="text-center header">Deja un Comentario</legend>
+                      <legend class="text-center header">{{'Info2'|translate}}</legend>
 
                       <div class="form-group">
                           <span class="col-md-1 col-md-offset-2 text-center"><i class="bi bi-person-fill bigicon">Usuario</i></span>

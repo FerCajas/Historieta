@@ -8,9 +8,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit{
   login: FormGroup;
+  usuario: string = '';
+  contraseña: string = '';
   constructor(private fb: FormBuilder) {
 this.login= this.fb.group({
-  correo:['',Validators.required],
+  usuario:['',Validators.required],
   contraseña:['',Validators.required]
 })
   }
@@ -18,6 +20,7 @@ this.login= this.fb.group({
 
   }
   Acceso(){
-    console.log("Bienvenido")
+    let correo = this.login.get('usuario')?.value;
+    alert(`Hola ${correo} Bienvenido`)
   }
 }

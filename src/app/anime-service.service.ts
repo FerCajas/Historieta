@@ -7,7 +7,8 @@ import { Injectable } from '@angular/core';
 export class AnimeServiceService {
   private url = 'https://api.jikan.moe/v4/anime';
   constructor(private http:HttpClient) { }
-  public Get_Api(){
+  public Get_Api(query: string){
+    const url = `${this.url}/anime?q=${query}`;
     return this.http.get(this.url);
   }
 }
