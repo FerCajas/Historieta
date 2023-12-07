@@ -1,8 +1,5 @@
-<div class="wrapper contenedor">
+<div class="wrapper">
 <footer class="bg-body-tertiary text-center">
-  <div class="col">
-    <img src="assets/Images/Logo.png" alt="Logo">
-  </div>
   <div class="container p-4">
     <section class="mb-4">
       <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 facebook-link" href="https://www.facebook.com/" role="button"
@@ -35,11 +32,8 @@
     </section>
     <br>
     <section class="mb-4">
-      <p>
-        La historia es la ciencia social encargada de estudiar
-        los eventos del pasado de la humanidad a través de distintas
-         metodologías que analizan el contexto social, político, económico,
-         geográfico y psicológico del hombre a través de su entorno.
+      <p *ngFor="let parrafo of Parrafos">
+        {{parrafo.path}}
       </p>
     </section>
   </div>

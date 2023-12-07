@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit{
 parrafo:String = "Some quick example text to build on the card title and make up the bulk of the card's content."
 img ="assets/Images/Libro.png"
 img2 ="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png"
-img3 ="assets/Images/Pago.jpg"
+img3 ="https://img.freepik.com/vector-premium/concepto-noticias-mundiales-ilustracion-globo-vectorial-tema-periodistico-noticias-vivo_570429-18111.jpg"
 
   nuevocomentario: FormGroup;
   constructor(private fb: FormBuilder) {
