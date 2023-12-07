@@ -1,10 +1,9 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
   <div class="alert alert-primary" role="alert">
     <p class="text-center"><b>INICIO DE SECCION</b></p>
-    <img src="assets/Images/Logo.png" alt="">
     <form [formGroup] = "login" (submit) = "Acceso()">
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
+        <label for="exampleInputEmail1">User</label>
         <div class="col-lg-25">
           <input formControlName = "usuario" [name]="usuario" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           <span *ngIf="login.get('usuario')?.invalid && login.get('usuario')?.touched" class="text-danger">Ingrese su correo</span>

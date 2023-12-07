@@ -1,22 +1,21 @@
-<h1 style="text-align: center;">Encuentra las mejores historias</h1>
+<h1 style="text-align: center;">{{parrafo}}</h1>
 <div class="mb-3 d-flex justify-content-center">
   <form class="d-flex" role="search">
-    <p>Buscar</p>
-    <input name="searchQuery" [(ngModel)]="searchQuery" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 350px;">
-    <button (click)="optenerdata()" class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+    <div class="input-group">
+      <input id="searchQuery" name="searchQuery" [(ngModel)]="searchQuery" class="form-control" type="search" placeholder="{{'search'|translate}}" aria-label="Search" style="width: 350px;">
+      <button (click)="optenerdata()" class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+    </div>
   </form>
 </div>
 <br>
 
-<div class="row">
+<div class="row" *ngIf="searchResults.length > 0">
   <div class="col-4" *ngFor="let anime of searchResults">
     <div class="alert alert-primary" role="alert">
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Lectura</button>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          <p class="text-center"><b>{{ anime.title }}</b></p>
-          <p>{{ anime.synopsis }}</p>
-        </div>
+      <button class="btn btn-outline-success" type="button" (click)="anime.showDetails = !anime.showDetails">{{ anime.showDetails ? 'Ocultar detalles' : 'Mostrar detalles' }}</button>
+      <div class="card card-body" *ngIf="anime.showDetails">
+        <p class="text-center"><b>{{ anime.title }}</b></p>
+        <p>{{ anime.synopsis }}</p>
       </div>
     </div>
   </div>

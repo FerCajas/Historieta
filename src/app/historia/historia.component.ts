@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./historia.component.css']
 })
 export class HistoriaComponent implements OnInit{
+  parrafo:String="Encuentra las mejores historias"
   searchQuery = '';
   control = new FormControl();
   searchResults: any[] = [];
@@ -22,9 +23,11 @@ export class HistoriaComponent implements OnInit{
     this.AnimeServiceService.Get_Api(this.searchQuery).subscribe((data: any) => {
       console.log(data);
       var resp: any = data;
-      this.searchResults = resp.data.map((manga: any) => ({
-        title: manga.title,
-        synopsis: manga.synopsis
+      this.searchResults = resp.data.filter((anime: any) =>
+        anime.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+      ).map((anime: any) => ({
+        title: anime.title,
+        synopsis: anime.synopsis
       }));
     });
   }

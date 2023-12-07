@@ -1,12 +1,11 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
   <div class="alert alert-primary" role="alert">
     <p class="text-center"><b>REGISTRO</b></p>
-    <img src="assets/Images/Logo.png" alt="">
     <form [formGroup] = "registro" (submit) = "Registro()">
       <div class="form-group">
-        <label for="exampleInputEmail1">Usuario</label>
+        <label for="InputUser">User</label>
         <div class="col-lg-25">
-          <input formControlName = "usuario" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="User">
+          <input formControlName = "usuario" name= "user" type="text" class="form-control" id="InputUser" aria-describedby="emailHelp" placeholder="User">
           <span *ngIf="registro.get('usuario')?.invalid && registro.get('usuario')?.touched" class="text-danger">Ingrese un nombre de usuario</span>
         </div>
       </div>

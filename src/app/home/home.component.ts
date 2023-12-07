@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +26,9 @@ this.nuevocomentario= this.fb.group({
 
   }
   guardarcomentario(){
-    console.log(this.nuevocomentario)
+    const data = JSON.stringify(this.nuevocomentario.value);
+    localStorage.setItem('formData', data);
+    Swal.fire('¡Su comentario ha sido guardado con exito!');
+    localStorage.removeItem('formData');
   }
 }

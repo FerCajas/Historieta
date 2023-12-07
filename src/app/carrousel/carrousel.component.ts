@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./carrousel.component.css']
 })
 export class CarrouselComponent {
-// Activar carrusel al inicializar la vista
 
 }

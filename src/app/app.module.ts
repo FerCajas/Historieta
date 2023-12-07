@@ -32,7 +32,7 @@ const routes : Routes = [
   component:HistoriaComponent
 },
 {
-  path: 'Ayuda',
+  path: 'Informacion',
   component:HelpComponent
 },
 {

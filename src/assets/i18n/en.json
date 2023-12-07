@@ -1,11 +1,20 @@
 {
   "History":"History",
-  "Help":"Help",
+  "Information":"Information",
   "search":"search",
   "info":"Select the category",
   "book":"BOOK",
   "Play":"PLAY",
   "PAY":"PAY",
-  "Info2":"Leave a comment"
+  "Info2":"Leave a comment",
+  "InfoF":"FOLLOW US ON",
+  "InfoF2": "START OF SECTION",
+  "InfoF3":"Sign Up",
+  "InfoF4":"Login",
+  "InfoH1":"Hello, how can we help?",
+  "InfoH2":"MORE INFORMATION",
+  "InfoNF":"ERROR 404",
+  "InfoNF2":"Page not found",
+  "InfoNF3":"Go to Home"
 
 }

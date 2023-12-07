@@ -1,11 +1,20 @@
 {
   "History":"histoire",
-  "Help":"aide",
+  "Information":"Information",
   "search":"recherche",
   "info":"Sélectionnez la catégorie",
   "book":"LIVRE",
   "Play":"JOUER",
   "PAY":"PAYER",
-  "Info2":"laissez un commentaire"
+  "Info2":"laissez un commentaire",
+  "InfoF":"SUIVEZ-NOUS SUR",
+  "InfoF2":"DÉBUT DE SECTION",
+  "InfoF3":"S'inscrire",
+  "InfoF4":"Se connecter",
+  "InfoH1":"Bonjour, comment pouvons-nous vous aider ?",
+  "InfoH2":"PLUS D'INFORMATIONS",
+  "InfoNF":"ERREUR 404",
+  "InfoNF2":"Page non trouvée",
+  "InfoNF3":"Aller à la maison"
 
 }

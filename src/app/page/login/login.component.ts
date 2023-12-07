@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -21,6 +22,6 @@ this.login= this.fb.group({
   }
   Acceso(){
     let correo = this.login.get('usuario')?.value;
-    alert(`Hola ${correo} Bienvenido`)
+    Swal.fire(`Hola ${correo} Bienvenido`)
   }
 }
