@@ -17,6 +17,9 @@ import { HttpClient,HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TranslateLoader,TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BooksComponent } from './home/books/books.component';
+import { PlaysComponent } from './home/plays/plays.component';
+import { NewsComponent } from './home/news/news.component';
 
 const routes : Routes = [
 { path: '',
@@ -44,6 +47,18 @@ const routes : Routes = [
   component:RegistroComponent
 },
 {
+  path: 'Libros',
+  component:BooksComponent
+},
+{
+  path: 'Juegos',
+  component:PlaysComponent
+},
+{
+  path: 'Noticias',
+  component:NewsComponent
+},
+{
   path: '**', component: NotFoundComponent
 }
 ];
@@ -64,7 +79,10 @@ export function HttpLoaderFactory(http:HttpClient){
     HelpComponent,
     NotFoundComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    BooksComponent,
+    PlaysComponent,
+    NewsComponent
   ],
   imports: [
     [RouterModule.forRoot(routes)],
