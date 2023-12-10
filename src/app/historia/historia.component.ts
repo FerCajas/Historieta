@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./historia.component.css']
 })
 export class HistoriaComponent implements OnInit{
+  audio = 'assets/Sounds/Sonido.mp3'
   parrafo:String="Encuentra las mejores historias"
   searchQuery = '';
   control = new FormControl();
@@ -30,6 +31,10 @@ export class HistoriaComponent implements OnInit{
         synopsis: anime.synopsis
       }));
     });
+  }
+  sonido(){
+    const audio = new Audio(this.audio);
+    audio.play();
   }
 }
 
