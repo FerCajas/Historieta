@@ -47,15 +47,15 @@ const routes : Routes = [
   component:RegistroComponent
 },
 {
-  path: 'Libros',
+  path: 'Home/Libros',
   component:BooksComponent
 },
 {
-  path: 'Juegos',
+  path: 'Home/Juegos',
   component:PlaysComponent
 },
 {
-  path: 'Noticias',
+  path: 'Home/Noticias',
   component:NewsComponent
 },
 {

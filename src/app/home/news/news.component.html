@@ -1,1 +1,11 @@
-<p>news works!</p>
+<h1 class="text-center">Noticias</h1>
+<div class="row">
+  <div class="col-4" *ngFor="let noticia of noticias">
+    <div class="card card-body">
+      <img src="{{noticia.img}}" alt="">
+      <p>{{noticia.titulo}}</p>
+      <p>{{noticia.Contenido}}</p>
+      <p>{{noticia.fecha}}</p>
+    </div>
+  </div>
+</div>

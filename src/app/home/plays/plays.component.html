@@ -1,1 +1,26 @@
-<p>plays works!</p>
+<h1 class="text-center">{{titulo}}</h1>
+<div class="row">
+  <div class="col">
+    <div class="score-board">
+      <div id="user-label" class="badge">Usuario</div>
+      <div id="comp-label" class="badge">PC</div>
+      <span id="user-score">{{puntosUsuario}}</span>:<span id="comp-score">{{puntosPC}}</span>
+    </div>
+  </div>
+  <p class="info-game">{{resultado}}</p>
+  <div class="col">
+    <div class="choices">
+      <div class="choice" (click)="play('r')">
+        <img [src]="img1">
+      </div>
+      <div class="choice" (click)="play('p')">
+        <img [src]="img2">
+      </div>
+      <div class="choice" (click)="play('s')">
+        <img [src]="img3">
+      </div>
+    </div>
+  </div>
+  <p class="info-game">{{seleccion}}</p>
+</div>
+
