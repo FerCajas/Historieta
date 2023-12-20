@@ -21,47 +21,7 @@ import { BooksComponent } from './home/books/books.component';
 import { PlaysComponent } from './home/plays/plays.component';
 import { NewsComponent } from './home/news/news.component';
 
-const routes : Routes = [
-{ path: '',
-  redirectTo: '/Home',
-  pathMatch: 'full'
-},
-{
-  path: 'Home',
-  component:HomeComponent
-},
-{
-  path: 'Historia',
-  component:HistoriaComponent
-},
-{
-  path: 'Informacion',
-  component:HelpComponent
-},
-{
-  path: 'Login',
-  component:LoginComponent
-},
-{
-  path: 'Singup',
-  component:RegistroComponent
-},
-{
-  path: 'Home/Libros',
-  component:BooksComponent
-},
-{
-  path: 'Home/Juegos',
-  component:PlaysComponent
-},
-{
-  path: 'Home/Noticias',
-  component:NewsComponent
-},
-{
-  path: '**', component: NotFoundComponent
-}
-];
+
 
 export function HttpLoaderFactory(http:HttpClient){
   return new TranslateHttpLoader(http);
@@ -85,7 +45,6 @@ export function HttpLoaderFactory(http:HttpClient){
     NewsComponent
   ],
   imports: [
-    [RouterModule.forRoot(routes)],
     BrowserModule,
     AppRoutingModule,
     CarouselModule.forRoot(),
