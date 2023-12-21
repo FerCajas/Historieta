@@ -1,3 +1,7 @@
+# Logo
+
+![image](https://github.com/FerCajas/Historieta/assets/87354391/b2fa95b1-85a7-4e03-9d56-a5a1c42fdfef)
+
 # MyHistory
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
