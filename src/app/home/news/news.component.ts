@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArchivosService } from 'src/app/Service/archivos.service';
-
+import{archivos} from '../../Interfaces/Archivos'
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
@@ -9,26 +9,23 @@ import { ArchivosService } from 'src/app/Service/archivos.service';
 export class NewsComponent implements OnInit {
   fileToUpload: File | null = null;
   fileUrl: string | null = null;
-  listarchivo: any[] = [];
+  listararchivos : archivos[]=[]
 
   constructor(private ArchivosService: ArchivosService) { }
 
   ngOnInit(): void {
-    this.llenardata();
+    this.mostrardata();
   }
 
-  llenardata() {
-    this.ArchivosService.Get_Api().subscribe((data: any) => {
-      console.log(data);
-      var resp: any = data;
-      if (resp.data != null) {
-        this.listarchivo = resp.data.map((archivo: any) => ({
-          name: archivo.name,
-          content: archivo.content,
-          date: archivo.date,
-        }));
-      }
-    });
+
+
+  public mostrardata() {
+    this.ArchivosService.Get_Api().subscribe(datos=>{
+      console.log(datos);
+      this.listararchivos=datos
+    }
+
+  )
   }
   handleFileInput(event: Event) {
     const fileList: FileList | null = (event.target as HTMLInputElement).files;
