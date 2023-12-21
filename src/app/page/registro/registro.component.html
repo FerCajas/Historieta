@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
   <div class="alert alert-primary" role="alert">
     <p class="text-center"><b>REGISTRO</b></p>
-    <form [formGroup]="registro">
+    <form [formGroup]="registro" (submit) = "guardar() ">
       <div class="form-group">
         <label for="InputUser">User</label>
         <div class="col-lg-25">
@@ -26,12 +26,6 @@
       <br>
       <button type="submit" class="btn btn-success w-100" [disabled]="registro.invalid">Registrarse</button>
     </form>
-    <div *ngIf="registro.valid" class="alert alert-success mt-3" role="alert">
-      ¡Registro exitoso!
-    </div>
-    <div *ngIf="registro.invalid && registro.touched" class="alert alert-danger mt-3" role="alert">
-      ¡Por favor complete todos los campos!
-    </div>
   </div>
 </div>
 
