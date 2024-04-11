@@ -13,7 +13,9 @@ audio_libro = 'assets/Sounds/Hlibro.mp3'
 audio_juego = 'assets/Sounds/HJuegos.mp3'
 audio_noticias = 'assets/Sounds/HNoticias.mp3'
 
-parrafo:String = "Some quick example text to build on the card title and make up the bulk of the card's content."
+parrafo:String = "Variedad de informacion que comparten el conocimiento en la busqueda."
+parrafo2:String = "Desafio y aprendizaje potenciando su imaginacion mediante la creatividad."
+parrafo3:String = "Se presentan novedades e informaciones actualizadas."
 img ="assets/Images/Libro.png"
 img2 ="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Video-Game-Controller-Icon-IDV-green.svg/2048px-Video-Game-Controller-Icon-IDV-green.svg.png"
 img3 ="https://img.freepik.com/vector-premium/concepto-noticias-mundiales-ilustracion-globo-vectorial-tema-periodistico-noticias-vivo_570429-18111.jpg"
