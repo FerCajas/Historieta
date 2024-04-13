@@ -1,17 +1,51 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" *ngFor="let image of images">
-      <img src="{{ image.path }}" class="d-block w-100" alt="..." style="height: 300px;">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<div class="container-fluid">
+  <carousel class="carousel" [itemsPerSlide]="1">
+    <slide>
+      <div>
+        <img src="https://www.alura.com.br/artigos/assets/html-css-js/imagem-1.png" alt="" class="d-block w-100" style="height: 300px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">Imagen 1</h5>
+          <p class="text-dark">Texto para la imagen 1.</p>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div>
+        <img src="https://images.ctfassets.net/c63hsprlvlya/6dRcoWOuzvM4HBuvHBCyow/2d0c350d12a57051d027895ff8db7bba/what-is-micro-frontend.webp" alt="" class="d-block w-100 " style="height: 300px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">Imagen 2</h5>
+          <p class="text-dark">Texto para la imagen 2.</p>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div>
+        <img src="https://lafrikileria.com/blog/wp-content/uploads/2023/07/robots-mecha-japoneses-anime.jpg" alt="" class="d-block w-100 " style="height: 300px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">Imagen 3</h5>
+          <p class="text-dark">Texto para la imagen 3.</p>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div>
+        <img src="https://www.suratica.es/wp-content/uploads/2020/10/que-es-el-backend-y-que-es-el-frontend-1.jpg" alt="" class="d-block w-100 " style="height: 300px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">Imagen 4</h5>
+          <p class="text-dark">Arquitectura Web.</p>
+        </div>
+      </div>
+    </slide>
+    <slide>
+      <div>
+        <img src="https://media.gq.com.mx/photos/5cbf8c609277d8857be23c04/16:9/w_2560%2Cc_limit/GettyImages-956550532.jpg" alt="" class="d-block w-100 " style="height: 300px;">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="text-dark">Imagen 5</h5>
+          <p class="text-dark">Texto para la Imagen 5.</p>
+        </div>
+      </div>
+    </slide>
+  </carousel>
 </div>
 <h1>{{'InfoH1'|translate}}</h1>
 <hr>
@@ -32,42 +66,42 @@
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Accordion Item #1
+          Como ingresar al sistema
         </button>
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <strong>Inicio al Sistema.</strong>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingTwo">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Accordion Item #2
+          archivos al sistema
         </button>
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <strong>Archivo en el Sistema.</strong>
         </div>
       </div>
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingThree">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Accordion Item #3
+          Realizar busquedas rapidas
         </button>
       </h2>
       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+          <strong>Busquedas Rapidas.</strong>
         </div>
       </div>
     </div>
   </div>
   <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
+    <p>Redes Sociales.</p>
     <div class="row">
       <a target="_blank" class="facebook-link" href="https://www.facebook.com/"><i class="bi bi-facebook bi-lg">Facebook</i></a>
     </div>
