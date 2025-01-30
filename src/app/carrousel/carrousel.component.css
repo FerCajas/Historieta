@@ -2,7 +2,6 @@
   width: 100%;
 }
 
-/* Ajustar el tamaño de las imágenes en el carrusel */
 .carousel img {
   max-width: 100%;
   height: auto;

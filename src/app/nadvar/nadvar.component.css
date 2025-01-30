@@ -9,15 +9,15 @@ img:hover {
 .Ayuda-link,
 .home-link,
 .history-link {
-  font-size: 16px; /* Puedes ajustar el tamaño según tus preferencias */
-  transition: font-size 0.3s ease; /* Animación de transición */
+  font-size: 16px;
+  transition: font-size 0.3s ease;
 }
 
-/* Animación al pasar el cursor */
+
 .Ayuda-link:hover,
 .home-link:hover,
 .history-link:hover {
-  font-size: 21px; /* Tamaño más grande al pasar el cursor */
+  font-size: 21px;
 }
 
 a:hover {
@@ -68,4 +68,18 @@ button::before{
   100%{
     background-position: 0 0;
   }
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  position: absolute;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: black;
 }
