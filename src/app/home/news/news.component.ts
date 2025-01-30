@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArchivosService } from 'src/app/Service/archivos.service';
 import{archivos} from '../../Interfaces/Archivos'
+
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',

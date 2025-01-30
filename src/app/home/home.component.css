@@ -1,5 +1,5 @@
 .header {
-  color: #050c13;
+  color: black;
   font-size: 27px;
   padding: 10px;
 }
@@ -16,3 +16,4 @@ img {
 img:hover {
   transform: scale(1.2);
 }
+

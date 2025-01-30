@@ -1,45 +1,55 @@
 <div class="wrapper">
-<footer class="bg-body-tertiary text-center">
-  <div class="container p-4">
-    <section class="mb-4">
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 facebook-link" target="_blank" href="https://www.facebook.com/" role="button"
-        ><i class="bi bi-facebook bi-lg"></i></a>
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <section class="mb-4">
+        <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.facebook.com/" role="button">
+          <i class="bi bi-facebook bi-lg"></i>
+        </a>
+        <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://web.whatsapp.com/" role="button">
+          <i class="bi bi-whatsapp bi-lg"></i>
+        </a>
+        <a data-mdb-ripple-init class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.youtube.com/" role="button">
+          <i class="bi bi-youtube bi-lg"></i>
+        </a>
+      </section>
 
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 whatsapp-link" target="_blank" href="https://web.whatsapp.com/" role="button"
-        ><i class="bi bi-whatsapp bi-lg"></i></a>
+      <section class="mb-4">
+        <p>{{'InfoF2' | translate}}</p>
+      </section>
 
-      <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1 youtube-link" target="_blank" href="https://www.youtube.com/" role="button"
-        ><i class="bi bi-youtube  bi-lg"></i></a>
-
-    </section>
-
-    <section class="">
-      <form action="">
+      <section class="mb-4">
         <div class="row">
-          <div class="col-12 text-center">
-              <p>{{'InfoF2'|translate}}</p>
+          <div class="col-md-6 text-md-end">
+            <button type="button" class="btn btn-outline-success" routerLink="/Singup">{{'InfoF3' | translate}}</button>
           </div>
-      </div>
-        <div class="row">
-          <div class="col text-end">
-              <button type="submit" class="btn btn-outline-success" routerLink="/Singup">{{'InfoF3'|translate}}</button>
+          <div class="col-md-6 text-md-start">
+            <button type="button" class="btn btn-outline-success" routerLink="/Login">{{'InfoF4' | translate}}</button>
           </div>
-          <div class="col text-start">
-              <button type="submit" class="btn btn-outline-success" routerLink="/Login">{{'InfoF4'|translate}}</button>
-          </div>
-      </div>
-      </form>
-    </section>
-    <br>
-    <section class="mb-4">
-      <p *ngFor="let parrafo of Parrafos">
-        {{parrafo.path}}
-      </p>
-    </section>
-  </div>
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-    Copyright © {{ currentYear }} HubSpot, Inc.
-  </div>
-</footer>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <h5>Contacto</h5>
+        <p>¿Tienes alguna pregunta? No dudes en contactarme.</p>
+      </section>
+
+      <section class="mb-4">
+        <a href="/sobre-nosotros" class="text-light me-3">Sobre mi</a>
+        <a href="/politica-privacidad" class="text-light me-3">Política de privacidad</a>
+        <a href="/terminos-uso" class="text-light">Términos de uso</a>
+      </section>
+
+      <section class="mb-4">
+        <p *ngFor="let parrafo of Parrafos">
+          {{ parrafo.path }}
+        </p>
+      </section>
+    </div>
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      Copyright © {{ currentYear }} Web Historia. Todos los derechos reservados.
+    </div>
+  </footer>
 </div>
+
 

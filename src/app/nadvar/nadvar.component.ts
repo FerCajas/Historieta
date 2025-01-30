@@ -1,6 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import {Router} from '@angular/router';
 import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-nadvar',
@@ -8,11 +10,19 @@ import Swal from 'sweetalert2';
   styleUrls: ['./nadvar.component.css']
 })
 export class NadvarComponent implements OnInit {
+  query: string = '';
   logo= "assets/Images/Logo.png"
   lang:string ='';
 
-  constructor(private translateService:TranslateService){
+  constructor(private router: Router, private translateService:TranslateService){
 
+  }
+
+  buscar(event: Event) {
+    event.preventDefault();
+    if (this.query) {
+      this.router.navigate(['/busqueda'], { queryParams: { q: this.query } });
+    }
   }
 
   ngOnInit(): void {
