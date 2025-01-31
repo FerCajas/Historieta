@@ -2,3 +2,48 @@
   background-image: url('https://w0.peakpx.com/wallpaper/692/979/HD-wallpaper-beach-anime-beautiful-painting-pretty.jpg');
   background-size: cover;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+}
+
+
+
+.container-i {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-i:hover {
+  background-color: blue;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container-i:hover i {
+  transform: scale(1.2) translateY(-5px);
+  color: black;
+}
+
+.bi-chat-right {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+bi-chat-right:hover {
+  transform: translateX(-10px);
+}

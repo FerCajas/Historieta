@@ -20,6 +20,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { BooksComponent } from './home/books/books.component';
 import { PlaysComponent } from './home/plays/plays.component';
 import { NewsComponent } from './home/news/news.component';
+import { ChatbotComponent } from './page/chatbot/chatbot.component';
 
 
 
@@ -42,7 +43,8 @@ export function HttpLoaderFactory(http:HttpClient){
     RegistroComponent,
     BooksComponent,
     PlaysComponent,
-    NewsComponent
+    NewsComponent,
+    ChatbotComponent
   ],
   imports: [
     BrowserModule,

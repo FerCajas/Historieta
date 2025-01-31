@@ -9,6 +9,7 @@ import { LoginComponent } from './page/login/login.component';
 import { RegistroComponent } from './page/registro/registro.component';
 import { HomeComponent } from './home/home.component';
 import { HistoriaComponent } from './historia/historia.component';
+import { ChatbotComponent } from './page/chatbot/chatbot.component';
 
 const routes : Routes = [
   { path: '',
@@ -46,6 +47,10 @@ const routes : Routes = [
   {
     path: 'Home/Noticias',
     component:NewsComponent
+  },
+  {
+    path: 'Chatbot',
+    component: ChatbotComponent
   },
   {
     path: '**', component: NotFoundComponent

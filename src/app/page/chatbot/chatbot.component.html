@@ -1,0 +1,34 @@
+<div class="chatbot-page">
+  <div class="chatbot-header">
+    <h4>Chatbot Historieta</h4>
+  </div>
+
+  <div class="chat-window">
+    <div *ngFor="let msg of messages">
+      <div [ngClass]="{'user-message': msg.sender === 'user', 'bot-message': msg.sender === 'bot'}">
+        <div *ngIf="msg.sender === 'bot'" class="bot-message-content">
+          <img class="bot-profile-image" src="assets/Images/Logo.png" alt="Bot Avatar">
+          <p>{{ msg.text }}</p>
+        </div>
+
+        <div *ngIf="msg.sender === 'user'" class="user-message-content">
+          <img class="bot-profile-image" src="assets/Images/Foto.png" alt="User Avatar">
+          <p>{{ msg.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Pregunta al Bot">
+    <button class="btn btn-outline-success" (click)="sendMessage()" type="submit">Enviar</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
