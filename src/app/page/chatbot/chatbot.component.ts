@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ChatbotComponent {
   userInput: string = '';
-  messages: { sender: string, text: string }[] = [
-    { sender: 'bot', text: '¡Hola! ¿En qué puedo ayudarte hoy? 😊' }
+  messages: { sender: string, text: string, animatedText: string }[] = [
+    { sender: 'bot', text: '¡Hola! ¿En qué puedo ayudarte hoy? 😊', animatedText: '' }
   ];
 
   private despedidas = [
@@ -36,29 +36,28 @@ export class ChatbotComponent {
 
   sendMessage() {
     if (this.userInput.trim()) {
-      this.messages.push({ sender: 'user', text: this.userInput });
+
+      this.messages.push({ sender: 'user', text: this.userInput, animatedText: this.userInput });
 
       const message = this.userInput.toLowerCase();
 
+
       if (message.includes('hola') || message.includes('buenos días') || message.includes('hey')) {
         const saludo = this.getRandomResponse(this.saludos);
-        this.messages.push({ sender: 'bot', text: saludo });
-        this.messages.push({ sender: 'bot', text: 'Aquí tienes algunas opciones: 1. Información sobre Historietas\n2. Consulta de Wikis\n3. Ver artículos sobre tecnología' });
-
+        this.animateBotResponse(saludo);
+        this.animateBotResponse('Aquí tienes algunas opciones: 1. Información sobre Historietas\n2. Consulta de Wikis\n3. Ver artículos sobre tecnología');
       } else if (message.includes('adios') || message.includes('chau') || message.includes('nos vemos')) {
         const despedida = this.getRandomResponse(this.despedidas);
-        this.messages.push({ sender: 'bot', text: despedida });
-
+        this.animateBotResponse(despedida);
       } else if (message.includes('1')) {
-        this.messages.push({ sender: 'bot', text: '¡Genial! Aquí tienes información sobre historietas: [enlace a historietas]. ¿Algo más? 📚' });
+        this.animateBotResponse('¡Genial! Aquí tienes información sobre historietas: <a href="https://enlace-a-historietas.com" target="_blank">Enlace a historietas</a>. ¿Algo más? 📚');
       } else if (message.includes('2')) {
-        this.messages.push({ sender: 'bot', text: 'Aquí puedes consultar las wikis más populares: [enlace a wikis]. ¿Te interesa algo más? 📖' });
+        this.animateBotResponse('Aquí puedes consultar las wikis más populares: <a href="https://enlace-a-wikis.com" target="_blank">Enlace a wikis</a>. ¿Te interesa algo más? 📖');
       } else if (message.includes('3')) {
-        this.messages.push({ sender: 'bot', text: 'Aquí tienes algunos artículos interesantes sobre tecnología: [enlace a artículos]. ¿Necesitas más información? 💻' });
-
+        this.animateBotResponse('Aquí tienes algunos artículos interesantes sobre tecnología: <a href="https://enlace-a-articulos.com" target="_blank">Enlace a artículos</a>. ¿Necesitas más información? 💻');
       } else {
         const respuestaGeneral = this.getRandomResponse(this.respuestasGenerales);
-        this.messages.push({ sender: 'bot', text: respuestaGeneral });
+        this.animateBotResponse(respuestaGeneral);
       }
 
       this.userInput = '';
@@ -69,7 +68,21 @@ export class ChatbotComponent {
     const randomIndex = Math.floor(Math.random() * responses.length);
     return responses[randomIndex];
   }
+
+
+  private animateBotResponse(response: string) {
+    const message = { sender: 'bot', text: response, animatedText: '' };
+    this.messages.push(message);
+
+    let index = 0;
+    const interval = setInterval(() => {
+      message.animatedText += response[index];
+      index++;
+
+      if (index === response.length) {
+        clearInterval(interval);
+      }
+    }, 100);
+  }
 }
-
-
 
