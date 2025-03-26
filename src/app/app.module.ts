@@ -21,6 +21,7 @@ import { BooksComponent } from './home/books/books.component';
 import { PlaysComponent } from './home/plays/plays.component';
 import { NewsComponent } from './home/news/news.component';
 import { ChatbotComponent } from './page/chatbot/chatbot.component';
+import { MultimediaComponent } from './multimedia/multimedia.component';
 
 
 
@@ -44,7 +45,8 @@ export function HttpLoaderFactory(http:HttpClient){
     BooksComponent,
     PlaysComponent,
     NewsComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    MultimediaComponent
   ],
   imports: [
     BrowserModule,

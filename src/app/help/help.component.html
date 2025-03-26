@@ -1,128 +1,107 @@
 <div class="container-fluid">
-  <carousel class="carousel" [itemsPerSlide]="1">
-    <slide>
-      <div>
-        <img src="https://www.alura.com.br/artigos/assets/html-css-js/imagem-1.png" alt="" class="d-block w-100" style="height: 300px;">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-dark">Imagen 1</h5>
-          <p class="text-dark">Texto para la imagen 1.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://images.ctfassets.net/c63hsprlvlya/6dRcoWOuzvM4HBuvHBCyow/2d0c350d12a57051d027895ff8db7bba/what-is-micro-frontend.webp" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-dark">Imagen 2</h5>
-          <p class="text-dark">Texto para la imagen 2.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://lafrikileria.com/blog/wp-content/uploads/2023/07/robots-mecha-japoneses-anime.jpg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-dark">Imagen 3</h5>
-          <p class="text-dark">Texto para la imagen 3.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://www.suratica.es/wp-content/uploads/2020/10/que-es-el-backend-y-que-es-el-frontend-1.jpg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-dark">Imagen 4</h5>
-          <p class="text-dark">Arquitectura Web.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://media.gq.com.mx/photos/5cbf8c609277d8857be23c04/16:9/w_2560%2Cc_limit/GettyImages-956550532.jpg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption d-none d-md-block">
-          <h5 class="text-dark">Imagen 5</h5>
-          <p class="text-dark">Texto para la Imagen 5.</p>
-        </div>
-      </div>
-    </slide>
-  </carousel>
-</div>
-<h1>{{'InfoH1'|translate}}</h1>
-<hr>
-<div class="row">
-  <div class="col-3">
-    <img [src]="img" class="card-img-top img-fluid" alt="Pago" style="width: 304px; height: 236px;">
+
+  <p class="h1 text-center display-4 display-sm-3 display-md-2 display-lg-1">
+    {{'InfoH1'|translate}}
+  </p>
+
+
+  <hr>
+
+
+  <div class="row">
+    <div class="col-md-3">
+      <img [src]="img" class="card-img-top img-fluid" alt="Pago" style="width: 100%; height: auto;">
+    </div>
+    <div class="col-md-9">
+      <h2 class="text-center">ACERCA DE</h2>
+      <p class="text-justify">{{parrafo}}</p>
+      <p class="text-justify">{{vision}}</p>
+      <p class="text-justify">{{Mision}}</p>
+    </div>
   </div>
-  <div class="col-8">
-    <h2 style="text-align: center;">ACERCA DE</h2>
-    <p style="text-align:justify">{{parrafo}}</p>
-    <p style="text-align:justify">{{vision}}</p>
-    <p style="text-align:justify">{{Mision}}</p>
+  <hr>
+
+
+  <div class="d-flex justify-content-center">
+    <img src="https://w7.pngwing.com/pngs/358/741/png-transparent-product-manuals-safety-system-owner-s-manual-organization-royal-signmanual.png" width="200" height="150" alt="Imagen">
   </div>
-</div>
-<hr>
-<div class="d-flex justify-content-center">
-  <img src="https://w7.pngwing.com/pngs/358/741/png-transparent-product-manuals-safety-system-owner-s-manual-organization-royal-signmanual.png" width="200" height="150" alt="">
-</div>
-<br>
-<div class="d-flex justify-content-center">
-  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-book-fill">{{'InfoH2'|translate}}</i></button>
-</div>
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Conocenos</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <br>
+
+
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+      <i class="bi bi-book-fill">{{'InfoH2'|translate}}</i>
+    </button>
   </div>
-  <img src="assets/Images/Logo.png" alt="">
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Como ingresar al sistema
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>Inicio al Sistema.</strong>
+ <br>
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Conócenos</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <img src="assets/Images/Logo.png" alt="Logo" class="img-fluid">
+    <div class="accordion" id="accordionExample">
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Cómo ingresar al sistema
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Inicio al Sistema.</strong> Aquí te explicamos cómo acceder al sistema de manera efectiva.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Archivos al sistema
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Archivo en el Sistema.</strong> Aprende cómo subir y gestionar tus archivos de manera segura.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Realizar búsquedas rápidas
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>Busquedas Rápidas.</strong> Optimiza tu tiempo con nuestra herramienta de búsqueda rápida.
+          </div>
         </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          archivos al sistema
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>Archivo en el Sistema.</strong>
-        </div>
+
+    <div class="offcanvas-body">
+      <p>Redes Sociales:</p>
+      <div class="row">
+        <a target="_blank" class="facebook-link" href="https://www.facebook.com/">
+          <i class="bi bi-facebook bi-lg">Facebook</i>
+        </a>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Realizar busquedas rapidas
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <strong>Busquedas Rapidas.</strong>
-        </div>
+      <div class="row">
+        <a target="_blank" class="whatsapp-link" href="https://web.whatsapp.com/">
+          <i class="bi bi-whatsapp bi-lg">Whatsapp</i>
+        </a>
+      </div>
+      <div class="row">
+        <a target="_blank" class="youtube-link" href="https://www.youtube.com/">
+          <i class="bi bi-youtube bi-lg">Youtube</i>
+        </a>
       </div>
     </div>
   </div>
-  <div class="offcanvas-body">
-    <p>Redes Sociales.</p>
-    <div class="row">
-      <a target="_blank" class="facebook-link" href="https://www.facebook.com/"><i class="bi bi-facebook bi-lg">Facebook</i></a>
-    </div>
-    <div class="row">
-      <a target="_blank" class="whatsapp-link" href="https://web.whatsapp.com/"><i class="bi bi-whatsapp bi-lg">Whatsapp</i></a>
-    </div>
-    <div class="row">
-      <a target="_blank" class="youtube-link" href="https://www.youtube.com/"><i class="bi bi-youtube  bi-lg">Youtube</i></a>
-    </div>
-  </div>
 </div>
+
 

@@ -10,3 +10,28 @@
 .image-custom-height {
   height: 10%;
 }
+
+.carousel-caption.custom-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-caption.custom-caption h5 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.carousel-caption.custom-caption p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+

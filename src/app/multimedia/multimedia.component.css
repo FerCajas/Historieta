@@ -1,0 +1,97 @@
+#bienvenida {
+  position: relative;
+  background-image: url('https://wallpapers.com/images/hd/multimedia-1920-x-1200-wallpaper-13aa6nzf9opjz2j1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+#bienvenida:hover h1, #bienvenida:hover p {
+  transform: scale(1.05);
+}
+
+
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+section {
+  padding: 50px 0;
+  background-color: #141414;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+section p {
+  font-size: 1.25rem;
+  color: #ddd;
+}
+
+
+.row-cols-1.row-cols-md-3.g-4 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card.shadow-lg {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+}

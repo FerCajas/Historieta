@@ -10,6 +10,7 @@ import { RegistroComponent } from './page/registro/registro.component';
 import { HomeComponent } from './home/home.component';
 import { HistoriaComponent } from './historia/historia.component';
 import { ChatbotComponent } from './page/chatbot/chatbot.component';
+import { MultimediaComponent } from './multimedia/multimedia.component';
 
 const routes : Routes = [
   { path: '',
@@ -51,6 +52,10 @@ const routes : Routes = [
   {
     path: 'Chatbot',
     component: ChatbotComponent
+  },
+  {
+    path: 'Multimedia',
+    component: MultimediaComponent
   },
   {
     path: '**', component: NotFoundComponent
