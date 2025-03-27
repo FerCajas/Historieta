@@ -1,4 +1,3 @@
-
 <div class="container-fluid p-0">
   <section id="bienvenida" class="text-center my-5 position-relative">
     <div class="bg-overlay">
@@ -9,10 +8,10 @@
 
   <section id="galeria" class="my-5">
     <h2 class="text-center mb-4 text-white">Galería de Entretenimiento</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col" *ngFor="let image of images">
-        <div class="card shadow-lg">
-          <img [src]="image" class="card-img-top" alt="Imagen" />
+    <div class="gallery-container">
+      <div class="gallery-scroll">
+        <div class="image-item" *ngFor="let image of images" (click)="selectImage(image)">
+          <img [src]="image" class="img-fluid" alt="Imagen" />
         </div>
       </div>
     </div>
@@ -28,9 +27,10 @@
         <a href="https://fercajas.github.io/Musica.github.io/" class="btn btn-light btn-lg mt-4" target="_blank">Abrir</a>
       </div>
     </div>
-
   </section>
 </div>
+
+
 
 
 
