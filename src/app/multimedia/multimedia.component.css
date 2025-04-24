@@ -1,13 +1,4 @@
-#bienvenida {
-  position: relative;
-  background-image: url('https://wallpapers.com/images/hd/multimedia-1920-x-1200-wallpaper-13aa6nzf9opjz2j1.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .bg-overlay {
   background: rgba(0, 0, 0, 0.6);

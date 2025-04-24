@@ -7,7 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { HistoriaComponent } from './historia/historia.component';
 import {RouterModule, Routes} from '@angular/router';
-import { CarrouselComponent } from './carrousel/carrousel.component';
+import { CarruselComponent } from './carrousel/carrousel.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HelpComponent } from './help/help.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -37,7 +37,7 @@ export function HttpLoaderFactory(http:HttpClient){
     FooterComponent,
     HomeComponent,
     HistoriaComponent,
-    CarrouselComponent,
+    CarruselComponent,
     HelpComponent,
     NotFoundComponent,
     LoginComponent,

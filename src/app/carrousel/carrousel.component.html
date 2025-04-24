@@ -1,85 +1,43 @@
 <div class="container-fluid">
-  <carousel class="carousel" [itemsPerSlide]="1">
-    <slide>
-      <div>
-        <img src="https://img2.rtve.es/im/6450763/?w=900" alt="" class="d-block w-100" style="height: 300px;">
-        <div class="carousel-caption custom-caption d-none d-md-block">
-          <h5 class="text-primmary">Documentales</h5>
-          <p class="text-primmary">Descubre historias fascinantes a través de documentales únicos que exploran culturas,
-             naturaleza, ciencia y eventos históricos impactantes.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://marketing4ecommerce.net/wp-content/uploads/2020/03/nueva-portada-enero.jpeg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption custom-caption d-none d-md-block">
-          <h5 class="text-primmary">Entretenimiento</h5>
-          <p class="text-primmary">Sumérgete en el mundo del entretenimiento con contenidos innovadores que te cautivarán.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://s3.ppllstatics.com/elcorreo/www/multimedia/202211/09/media/cortadas/Comic_alvaropons-anime-manga-kxHF-U180652286238MIF-1248x770@El%20Correo.jpeg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption custom-caption d-none d-md-block">
-          <h5 class="text-primmary">Arte</h5>
-          <p class="text-primmary">Explora el arte en todas sus formas,
-            descubriendo obras maestras y el proceso creativo de artistas visionarios.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://www.ui1.es/sites/default/files/blog/images/minima_neurociencia.jpg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption custom-caption d-none d-md-block">
-          <h5 class="text-primmary">Ciencias</h5>
-          <p class="text-primmary">Adéntrate en el fascinante universo de las ciencias,
-            que explican descubrimientos y avances sorprendentes.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://www.esan.edu.pe/images/blog/2018/06/18/1500x844-gestion-conocimiento.jpg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption custom-caption d-none d-md-block">
-          <h5 class="text-primmary">Conocimientos</h5>
-          <p class="text-primmary">Amplía tu mente con contenidos educativos que te ofrecen conocimientos profundos sobre
-             historia, filosofía y más.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://www.solmicro.com/images/joomlart/article/569585164bf57f8a1e8703b19497bdbc.jpg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption custom-caption d-none d-md-block">
-          <h5 class="text-primmary">Tecnologias</h5>
-          <p class="text-primmary">Conoce los avances tecnológicos que están transformando el mundo,
-             desde la inteligencia artificial hasta innovaciones futuristas.</p>
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div *ngFor="let carrusel of carruseles; let i = index"
+           class="carousel-item"
+           [class.active]="i === 0">
+
+
+        <img [src]="'http://localhost:1337' + carrusel.Imagen[0]?.url"
+             alt="{{ carrusel.Titulo }}"
+             class="d-block w-100"
+             style="height: 300px; object-fit: cover;">
+
+        <div class="carousel-caption d-none d-md-block">
+          <h5>{{ carrusel.Titulo }}</h5>
+          <p>{{ carrusel.Descripcion || 'Descripción no disponible' }}</p>
         </div>
       </div>
 
-    </slide>
-    <slide>
-      <div>
-        <img src="https://www.hacerfamilia.com/wp-content/uploads/2024/07/20150622085514.jpg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption custom-caption d-none d-md-block">
-          <h5 class="text-primmary">Peliculas</h5>
-          <p class="text-primmary">Disfruta de películas emocionantes que te transportan a nuevos
-            mundos, con historias que te llamaran la atencion.</p>
-        </div>
-      </div>
-    </slide>
-    <slide>
-      <div>
-        <img src="https://plammedia.agency/wp-content/uploads/2024/03/Marketing-Inmersivo.jpg" alt="" class="d-block w-100 " style="height: 300px;">
-        <div class="carousel-caption custom-caption d-none d-md-block">
-          <h5 class="text-primmary">Marketing Digital</h5>
-          <p class="text-primmary">Descubre las mejores estrategias de marketing, analizando
-            casos de éxito y las últimas tendencias para impulsar tu negocio.</p>
-        </div>
-      </div>
-    </slide>
-  </carousel>
+    </div>
+
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
 

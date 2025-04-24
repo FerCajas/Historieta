@@ -8,14 +8,17 @@
 </div>
 
 <div *ngIf="fileUrl">
-  <img [src]="fileUrl" alt="Archivo cargado">
+  <img [src]="fileUrl" alt="Archivo cargado" style="max-width: 300px;" />
+  <br>
+  <button (click)="convertirArchivo()">Convertir</button>
+  <button (click)="compartirArchivo()">Compartir</button>
 </div>
 
 <div class="mb-3 d-flex justify-content-center">
   <form class="d-flex" role="search">
     <div class="input-group">
       <input id="searchQuery" name="searchQuery"  class="form-control" type="search" placeholder="{{'search'|translate}}" aria-label="Search" style="width: 350px;">
-      <button (click)="mostrardata()" class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+      <button (click)="mostrarData()" class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
     </div>
   </form>
 </div>
