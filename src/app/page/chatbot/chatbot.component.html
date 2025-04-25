@@ -1,29 +1,45 @@
-<div class="chatbot-page">
-  <div class="chatbot-header">
-    <h4>Chatbot Historieta</h4>
-  </div>
 
-  <div class="chat-window">
+
+  <div class="chatbot-header">
+    <img class="bot-logo" src="assets/Images/Logo.png" alt="Bot Logo">
+    <h4 class="chat-title">Bienvenido a <span class="highlight">The Fanwebs +</span></h4>
+  </div>
+  <hr>
+
+  <div class="chat-window" #chatWindow>
     <div *ngFor="let msg of messages">
-      <div [ngClass]="{'user-message': msg.sender === 'user', 'bot-message': msg.sender === 'bot'}">
-        <div *ngIf="msg.sender === 'bot'" class="bot-message-content">
+
+
+      <div class="message-row left" *ngIf="msg.sender === 'bot'">
+        <div class="bot-message-content">
           <img class="bot-profile-image" src="assets/Images/Logo.png" alt="Bot Avatar">
           <p [innerHTML]="msg.animatedText"></p>
         </div>
+      </div>
 
-        <div *ngIf="msg.sender === 'user'" class="user-message-content">
+
+      <div class="message-row right" *ngIf="msg.sender === 'user'">
+        <div class="user-message-content">
           <img class="bot-profile-image" src="assets/Images/Foto.png" alt="User Avatar">
           <p>{{ msg.text }}</p>
         </div>
       </div>
+
     </div>
   </div>
 
+
+
   <div class="chat-input">
-    <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Pregunta al Bot">
-    <button class="btn btn-outline-success" (click)="sendMessage()" type="submit">Enviar</button>
+    <div class="input-container">
+      <input type="text" [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Pregunta al Bot">
+    </div>
+   <div class="button-container">
+    <button (click)="sendMessage()" type="submit">Enviar</button>
+   </div>
   </div>
-</div>
+
+
 
 
 
