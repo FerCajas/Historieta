@@ -1,41 +1,77 @@
-<div class="container-fluid p-0">
-  <section id="bienvenida" class="text-center position-relative">
-    <div class="gallery-container my-4">
-      <div class="gallery-scroll">
-        <div class="image-item" *ngFor="let image of images" (click)="selectImage(image)">
-          <img [src]="image" class="img-fluid" alt="Imagen" />
-        </div>
+<div class="container-fluid p-0 multimedia-platform">
+
+  <section id="bienvenida" class="hero-section">
+    <div class="hero-content">
+      <div class="bg-overlay">
+        <h1 class="hero-title">Bienvenido a tu Plataforma Multimedia</h1>
+        <p class="hero-subtitle">Disfruta de la mejor combinación de contenido multimedia para tu entretenimiento.</p>
+        <button class="btn btn-danger btn-hero">Explorar ahora</button>
       </div>
+      <img *ngIf="selectedImage" [src]="selectedImage" class="hero-background-image" alt="Imagen destacada">
     </div>
-    <div class="bg-overlay mb-5">
-      <h1 class="display-4 text-light">Bienvenido a la Página Multimedia</h1>
-      <p class="lead text-light">La combinación perfecta de contenido multimedia para entretenimiento.</p>
-    </div>
-
-
   </section>
 
 
-  <section id="proyectos" class="my-5">
-    <h2 class="text-center mb-4 text-white">Prueba otros servicios</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card shadow-lg">
-          <img src="../../assets/Images/Musica.png" class="card-img-top" alt="Proyecto Musica" />
-        </div>
-        <a href="https://fercajas.github.io/Musica.github.io/" class="btn btn-light btn-lg mt-4" target="_blank">Abrir</a>
+  <section class="gallery-section">
+    <div class="section-header">
+      <h2 class="section-title">Nuestro Contenido</h2>
+      <div class="scroll-arrows">
+        <button class="arrow-btn" (click)="scrollGallery(-300)">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="arrow-btn" (click)="scrollGallery(300)">
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
-      <div class="col">
-        <div class="card shadow-lg">
-          <img src="../../assets/Images/IAbot.png" class="card-img-top" alt="Proyecto Musica" />
+    </div>
+
+    <div class="gallery-container">
+      <div class="gallery-scroll" #galleryScroll>
+        <div class="image-item" *ngFor="let image of images; trackBy: trackByFn"
+             (click)="selectImage(image)" [class.selected]="selectedImage === image">
+          <img [src]="image" loading="lazy" class="gallery-img" alt="Imagen multimedia">
+          <div class="image-overlay">
+            <i class="fas fa-play play-icon"></i>
+          </div>
         </div>
-        <a href="#" class="btn btn-light btn-lg mt-4" target="_blank">Abrir</a>
       </div>
-      <div class="col">
-        <div class="card shadow-lg">
-          <img src="../../assets/Images/IOTInterfazLuces.png" class="card-img-top" alt="Proyecto Musica" />
+    </div>
+  </section>
+
+
+  <section id="proyectos" class="services-section">
+    <div class="section-header">
+      <h2 class="section-title">Prueba otros servicios</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="card-img-wrapper">
+          <img src="../../assets/Images/Musica.png" class="service-image" alt="Proyecto Música">
+          <div class="card-overlay">
+            <a href="https://fercajas.github.io/Musica.github.io/" class="btn btn-danger" target="_blank">Abrir</a>
+          </div>
         </div>
-        <a href="#" class="btn btn-light btn-lg mt-4" target="_blank">Abrir</a>
+        <h3 class="service-title">Música Premium</h3>
+      </div>
+
+      <div class="service-card">
+        <div class="card-img-wrapper">
+          <img src="../../assets/Images/IAbot.png" class="service-image" alt="Proyecto IA">
+          <div class="card-overlay">
+            <a href="#" class="btn btn-danger" target="_blank">Abrir</a>
+          </div>
+        </div>
+        <h3 class="service-title">Asistente de IA</h3>
+      </div>
+
+      <div class="service-card">
+        <div class="card-img-wrapper">
+          <img src="../../assets/Images/IOTInterfazLuces.png" class="service-image" alt="Proyecto IoT">
+          <div class="card-overlay">
+            <a href="#" class="btn btn-danger" target="_blank">Abrir</a>
+          </div>
+        </div>
+        <h3 class="service-title">Control IoT</h3>
       </div>
     </div>
   </section>

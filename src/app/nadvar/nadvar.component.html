@@ -5,54 +5,78 @@
 </section>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" routerLink="/Home"><img [src]="logo" width="90" height="90" alt="..."></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Área del logo destacada -->
+    <a class="navbar-brand logo-area" routerLink="/Home">
+      <img [src]="logo" width="90" height="90" alt="...">
+    </a>
+
+    <!-- Botón hamburguesa para móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Contenido del navbar -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active history-link" routerLink="/Historia"><i class="bi bi-book-half"><b>{{'History'|translate}}</b></i></a>
+          <a class="nav-link active history-link" routerLink="/Historia">
+            <i class="bi bi-book-half"><b>{{'History'|translate}}</b></i>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active Ayuda-link" routerLink="/Informacion"><i class="bi bi-question-octagon"><b>{{'Information'|translate}}</b></i></a>
+          <a class="nav-link active Ayuda-link" routerLink="/Informacion">
+            <i class="bi bi-question-octagon"><b>{{'Information'|translate}}</b></i>
+          </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link active Ayuda-link linkprod" role="button" data-bs-toggle="dropdown"><i class="bi bi-question-octagon"><b>Categorias</b></i></a>
+          <a class="nav-link active Ayuda-link linkprod" role="button" data-bs-toggle="dropdown">
+            <i class="bi bi-grid"><b>Categorías</b></i>
+          </a>
           <ul class="dropdown-menu">
-            <li><a (click)="click()" class="dropdown-item" >Documentales</a></li>
-            <li><a (click)="click()" class="dropdown-item" >Entretimiento</a></li>
-            <li><a (click)="click()" class="dropdown-item" >Arte</a></li>
-            <li><a (click)="click()" class="dropdown-item" >Ciencias</a></li>
-            <li><a (click)="click()" class="dropdown-item" >Conocimientos</a></li>
-            <li><a (click)="click()" class="dropdown-item" >Tecnologias</a></li>
+            <li><a (click)="click()" class="dropdown-item">Documentales</a></li>
+            <li><a (click)="click()" class="dropdown-item">Entretenimiento</a></li>
+            <li><a (click)="click()" class="dropdown-item">Arte</a></li>
+            <li><a (click)="click()" class="dropdown-item">Ciencias</a></li>
+            <li><a (click)="click()" class="dropdown-item">Conocimientos</a></li>
+            <li><a (click)="click()" class="dropdown-item">Tecnologías</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link active history-link" routerLink="/Multimedia"><i class="bi bi-book-half"><b>{{'Multimedia'|translate}}</b></i></a>
+          <a class="nav-link active history-link" routerLink="/Multimedia">
+            <i class="bi bi-collection-play"><b>{{'Multimedia'|translate}}</b></i>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active Ayuda-link" routerLink="/Foro"><i class="bi bi-question-octagon"><b>{{'Foro'|translate}}</b></i></a>
+          <a class="nav-link active Ayuda-link" routerLink="/Foro">
+            <i class="bi bi-chat-left-text"><b>{{'Foro'|translate}}</b></i>
+          </a>
         </li>
       </ul>
 
+      <!-- Select de idioma y barra de búsqueda -->
       <div class="d-flex justify-content-center align-items-center">
         <div class="mb-3 d-flex">
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <select class="form-select zonal_select selectAltura" (change)="ChangeLang($event)" name="" id="">
-                <option [selected]="lang==='en'" value="en">English </option>
-                <option [selected]="lang==='fr'" value="fr">Français </option>
-                <option [selected]="lang==='es'" value="es">Español </option>
+              <select class="form-select zonal_select selectAltura" (change)="ChangeLang($event)">
+                <option [selected]="lang==='en'" value="en">English</option>
+                <option [selected]="lang==='fr'" value="fr">Français</option>
+                <option [selected]="lang==='es'" value="es">Español</option>
               </select>
             </li>
           </ul>
+
           <form class="d-flex" role="search">
             <div class="input-group">
-              <input id="searchQuery" name="searchQuery" class="form-control" type="search" placeholder="{{'search'|translate}}" aria-label="Search" style="width: 350px;">
-              <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+              <input id="searchQuery" name="searchQuery" class="form-control" type="search"
+                placeholder="{{'search'|translate}}" aria-label="Search" style="width: 350px;">
+              <button class="btn btn-outline-success" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
             </div>
           </form>
         </div>
@@ -60,6 +84,7 @@
     </div>
   </div>
 </nav>
+
 
 
 

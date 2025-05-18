@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-multimedia',
   templateUrl: './multimedia.component.html',
   styleUrls: ['./multimedia.component.css']
 })
-export class MultimediaComponent {
+export class MultimediaComponent implements AfterViewInit {
+  @ViewChild('galleryScroll') galleryScroll!: ElementRef<HTMLElement>;
+
   images = [
     'https://m.media-amazon.com/images/M/MV5BMGVhZTY1YTctOWJlYS00MjcxLTlkNDgtYTUxZTM5MzMzZjI2XkEyXkFqcGc@._V1_.jpg',
     'https://images.bauerhosting.com/legacy/empire-tmdb/films/603/images/7u3pxc0K1wx32IleAkLv78MKgrw.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80',
@@ -18,9 +20,37 @@ export class MultimediaComponent {
     'https://assets.xboxservices.com/assets/20/38/203850f5-1bed-4912-b25f-193ee890c97f.jpg?n=Fortnite_GLP-Page-Hero-1084_876951_1920x1080.jpg'
   ];
 
-  selectedImage: string | null = null;
+  selectedImage: string = this.images[0];
 
-  selectImage(image: string) {
+  ngAfterViewInit() {
+
+    if (!this.galleryScroll) {
+      console.error('No se encontró el elemento galleryScroll');
+    }
+  }
+
+  selectImage(image: string): void {
     this.selectedImage = image;
+  }
+
+  scrollGallery(amount: number): void {
+    try {
+      if (this.galleryScroll && this.galleryScroll.nativeElement) {
+        this.galleryScroll.nativeElement.scrollBy({
+          left: amount,
+          behavior: 'smooth'
+        });
+      }
+    } catch (error) {
+      console.error('Error al hacer scroll:', error);
+
+      if (this.galleryScroll && this.galleryScroll.nativeElement) {
+        this.galleryScroll.nativeElement.scrollLeft += amount;
+      }
+    }
+  }
+
+  trackByFn(index: number, item: string): string {
+    return item;
   }
 }

@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class NadvarComponent implements OnInit {
   query: string = '';
-  logo= "assets/Images/Logo.png"
+  logo= "assets/Images/LogoFanwebs.png"
   lang:string ='';
 
   constructor(private router: Router, private translateService:TranslateService){
